@@ -1,0 +1,8 @@
+Once upon a time there was a DOS user who saw Unix, and saw that it was
+good. After typing cp on his DOS machine at home, he downloaded GNU's
+unix tools ported to DOS and installed them. He rm'd, cp'd, and mv'd
+happily for many days, and upon finding elvis, he vi'd and was happy. After
+a long day at work (on a Unix box) he came home, started editing a file,
+and couldn't figure out why he couldn't suspend vi (w/ ctrl-z) to do
+a compile.
+(By ewt@tipper.oit.unc.edu (Erik Troan)
