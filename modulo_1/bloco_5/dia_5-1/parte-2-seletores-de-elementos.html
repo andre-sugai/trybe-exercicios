@@ -8,14 +8,22 @@
       <p id="second-paragraph" class="1">Segundo parágrafo!</p>
     </header>
     <script>
-    //   const paragraph = document.getElementById("second-paragraph").innerText = "Este é o segundo parágrafo alterado via Javascript";
-    //   paragraph.style.color = "red";
+    const paragraph = document.getElementById("paragraph");
 
-    const paragrafo = document.getElementsByClassName("1");
-    paragrafo[0].style.color = "red";
+      paragraph.style.color = "red";
+      const título = document.getElementById('page-title').innerText = 'Assassinos por Natureza';
 
-    const subtitulo = document.getElementsByTagName('h4')[0];
-    subtitulo.style.color = "blue";
+      const segundoParagrafo = document.getElementById('second-paragraph').innerText = 'Usando a criatividade para editar o segundo parágrafo';
+
+      const subtitulo = document.getElementById('subtitle').innerText = 'Editando o subtítulo via JavaScript';
+
+      const paragrafos = document.getElementsByClassName('1');
+
+      const mudarCorParagrafo1 = document.getElementsByClassName('1')[0].style.backgroundColor = 'gray';
+
+      const mudaCorSubtitulo = document.getElementsByTagName('h4')[0].style.color = 'blue';
+
+
 
     </script>
   </body>
