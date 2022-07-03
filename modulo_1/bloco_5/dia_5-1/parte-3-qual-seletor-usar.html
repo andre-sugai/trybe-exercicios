@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph" class="1">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph" class="1">Segundo parágrafo!</p>
+    </header>
+    <script>
+    const paragraph = document.querySelector("#paragraph");
+    paragraph.style.color = "red";
+
+    const título = document.querySelector('#page-title').innerText = 'Assassinos por Natureza';
+
+const segundoParagrafo = document.querySelector('#second-paragraph').innerText = 'Usando a criatividade para editar o segundo parágrafo';
+
+const subtitulo = document.querySelector('#subtitle').innerText = 'Editando o subtítulo via JavaScript';
+
+const paragrafos = document.querySelector('.1');
+
+const mudarCorParagrafo1 = document.querySelector('.1')[0].style.backgroundColor = 'gray';
+
+const mudaCorSubtitulo = document.querySelectorAll('h4')[0].style.color = 'blue';
+
+    </script>
+  </body>
+</html>
