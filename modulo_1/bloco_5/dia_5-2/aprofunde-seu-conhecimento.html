@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+      const addH1 = document.createElement('h1');
+      addH1.innerText = 'Exercício 5.2 - JavaScript DOM';
+      document.body.appendChild(addH1);
+
+      const addMain = document.createElement('main');
+      addMain.className = 'main-content';
+      document.body.appendChild(addMain);
+
+      const addSection = document.createElement('section');
+      addSection.className = 'center-content';
+      addMain.appendChild(addSection);
+
+      const addP = document.createElement('p');
+      addP.innerText ='Texto de Exemplo adicionado via Javascript';
+      addSection.appendChild(addP);
+
+      const addSection2 = document.createElement('section');
+      addSection2.className = 'left-content';
+      addMain.appendChild(addSection2);
+
+      const addSection3 = document.createElement('section');
+      addSection3.className = 'right-content';
+      addSection3.style.marginRight = 'auto';
+      addMain.appendChild(addSection3);
+
+      const addImg = document.createElement('img');
+      addImg.src = 'https://picsum.photos/200';
+      addImg.className = 'small-image';
+      addSection2.appendChild(addImg);
+
+      const addList = document.createElement('ul');
+      addList.innerText = 'Lista Não Ordenada';
+      addSection3.appendChild(addList);
+
+      const listItem1 = document.createElement('li');
+      listItem1.innerText = 'um';
+      addList.appendChild(listItem1);
+
+      const listItem2 = document.createElement('li');
+      listItem2.innerText = 'dois';
+      addList.appendChild(listItem2);
+
+      const listItem3 = document.createElement('li');
+      listItem3.innerText = 'três';
+      addList.appendChild(listItem3);
+
+      const listItem4 = document.createElement('li');
+      listItem4.innerText = 'quatro';
+      addList.appendChild(listItem4);
+
+      for (let i = 0; i < 4; i += 1){
+        const addH3 = document.createElement('h3');
+        addH3.innerText = 'H3' + ' ' + (i + 1);
+        addMain.appendChild(addH3);
+
+      }
+
+      const addTitle = document.querySelector ('h1');
+      addTitle.className = 'title';
+
+      const addDescription = document.getElementsByTagName('h3');
+      for (let i = 0; i < 4; i += 1){
+      addDescription[i].className = 'description';
+      }
+
+      const removeSection = document.getElementsByClassName('left-content')[0];
+      addMain.removeChild(removeSection);
+
+      const trocaCor = document.getElementsByClassName('center-content')[0].parentNode.style.backgroundColor = 'green';
+      
+      const removeUltimoDaLista = document.getElementsByTagName('ul')[0];
+      removeUltimoDaLista.lastChild.remove();
+      removeUltimoDaLista.lastChild.remove();
+    </script>
+  </body>
+</html>
